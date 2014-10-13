@@ -1,0 +1,38 @@
+print("Please enter your first number: ");
+String s = System.console().readLine();
+double  n1 = Double.parseDouble(s);
+print("Please enter your second number: ");
+String s = System.console().readLine();
+double  n2 = Double.parseDouble(s);
+println("Select an operation.");
+println("Type + for addition");
+println("Type - for subtraction");
+println("Type * for multiplication");
+println("Type / for division");
+print("Enter your selection: ");
+String selection = System.console().readLine();
+double answer = 0.0;
+enum selection {
+	+,
+	-
+	*,
+	/,
+}
+switch (selection) {
+	case +:
+		answer = n1 + n2;
+		break,
+	case -:
+		answer = n1 - n2;
+		break,
+	case *:
+		answer = n1 * n2;
+		break,
+	case /:
+		answer = n1 / n2;
+		break,
+	default:
+		println("That is an invalid choice. Try again.");
+		break;
+}
+println("Your answer is " + answer);
