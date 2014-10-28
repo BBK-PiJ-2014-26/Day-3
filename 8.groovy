@@ -6,9 +6,11 @@ int sLength = s.length()
 int pointer = sLength - 1
 char sChar 
 print s
-	while (pointer != 0) {
+	while (pointer != -1) {
 		sChar = s.charAt(pointer)
-		printer sChar
+		print sChar
+		pointer--
 	}
+print "\n"
 println "palindrome y'all"
 		
