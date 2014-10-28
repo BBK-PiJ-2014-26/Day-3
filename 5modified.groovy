@@ -2,27 +2,28 @@
 
 print "Enter a line of text: "
 String s = System.console().readLine()
+String str = null
 boolean correctChar = false
 while (!correctChar) {
 	print "Please enter the character you wish to count: "
-	String str = System.console().readLine()
+	str = System.console().readLine()
  	if (str.length() > 1) {
 		println str + " is an incorrect entry. Try again."
 	} else {
-		char countSubject = str.charAt()
 		correctChar = true
 		}
-}	
+}
+char subject = str.charAt(0)	
 int count = 0
 int pointer = 0
 int sLength = s.length()
 while (pointer != sLength) {
 	char letter = s.charAt(pointer)
-	if (letter == 'countSubject') {
-		countE = countE + 1
+	if (letter == subject) {
+		count = count + 1
 		pointer++
 	} else {
 		pointer++
 	}
 }
-println "There are " + countE + countSubject + " characters."
+println "There are " + count + " " + subject + " characters."
