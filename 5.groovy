@@ -5,11 +5,16 @@ String s = System.console().readLine()
 int countE = 0
 int pointer = 0
 int sLength = s.length()
-While (pointer) != (sLength - 1)) {
+while (pointer != sLength) {
 	char letter = s.charAt(pointer)
-	if (letter = e || letter = E) {
+	if (letter == 'e') {
 		countE = countE + 1
 		pointer++
-	} else { 
+	} else if (letter == 'E') { 
+		countE = countE + 1
 		pointer++
-println "There are " + pointer + "e characters"
+	} else {
+		pointer++
+	}
+}
+println "There are " + countE + " e characters"
